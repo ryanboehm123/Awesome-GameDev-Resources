@@ -19,6 +19,7 @@ int main(){
   seed ^= seed >> 17;
   seed ^= seed << 5;
 
+  seed *= 0xdeadbeef;
   int value = seed % (r2 - r1 + 1) + r1;
   std::cout << value << std::endl;
   return seed;
